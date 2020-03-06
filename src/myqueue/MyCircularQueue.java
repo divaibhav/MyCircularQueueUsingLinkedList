@@ -31,7 +31,7 @@ public class MyCircularQueue {
 
     public Node dequeue() {
         Node response = null;
-        if (rear != null) {
+        if (!isEmpty()) {
 
             response = rear.getNext();
             size--;
