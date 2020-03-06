@@ -17,11 +17,13 @@ public class MyCircularQueue {
         Node node = new Node(data);
         if (rear == null) {
             rear = node;
+            size++;
             //giving circular behaviour
             node.setNext(node);
         } else {
             rear.setNext(node);
             rear = node;
+            size++;
             //giving circular behaviour
             node.setNext(node);
         }
@@ -30,6 +32,7 @@ public class MyCircularQueue {
     public Node dequeue() {
         Node response = null;
         if (rear != null) {
+
             response = rear.getNext();
             //only a single node
             if (rear.getNext() == rear) {
