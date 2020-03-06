@@ -14,7 +14,7 @@ public class MyMain {
         MyCircularQueue circularQueue = new MyCircularQueue();
         circularQueue.enqueue(200);
         circularQueue.enqueue(400);
-        //circularQueue.enqueue(677);
+        circularQueue.enqueue(677);
 
         Node peek = circularQueue.peek();
         if (peek != null) {

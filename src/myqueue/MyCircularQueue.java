@@ -22,7 +22,7 @@ public class MyCircularQueue {
             node.setNext(node);
         } else {
             //giving circular behaviour
-            node.setNext(rear);
+            node.setNext(rear.getNext());
             rear.setNext(node);
             rear = node;
             size++;
