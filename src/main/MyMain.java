@@ -18,7 +18,16 @@ public class MyMain {
 
         Node peek = circularQueue.peek();
         if (peek != null) {
-            System.out.println(peek.getData() + "front of queue");
+            System.out.println(peek.getData() + " front of queue");
+        }
+        Node delete = circularQueue.dequeue();
+        if (delete != null) {
+            System.out.println(delete.getData() + "  deleted front of queue");
+        }
+
+        peek = circularQueue.peek();
+        if (peek != null) {
+            System.out.println(peek.getData() + " front of queue");
         }
 
     }
