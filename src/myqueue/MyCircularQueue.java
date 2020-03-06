@@ -15,7 +15,7 @@ public class MyCircularQueue {
 
     public void enqueue(int data) {
         Node node = new Node(data);
-        if (rear == null) {
+        if (isEmpty()) {
             rear = node;
             size++;
             //giving circular behaviour
