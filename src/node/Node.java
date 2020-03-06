@@ -7,14 +7,18 @@
 package node;
 
 public class Node {
+    // a field to store information
     private int data;
+    // a filed to keep reference of next node
     private Node next;
 
+    // parameterized constructor with data field
     public Node(int data) {
         this.data = data;
         next = null;
     }
 
+    //getter and setter for data and next field
     public int getData() {
         return data;
     }
