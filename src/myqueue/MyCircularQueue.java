@@ -26,5 +26,19 @@ public class MyCircularQueue {
         }
     }
 
+    public Node dequeue() {
+        Node response = null;
+        if (rear != null) {
+            response = rear.getNext();
+            //only a single node
+            if (rear.getNext() == rear) {
+                rear = null;
+            } else {
+                rear.setNext(response.getNext());
+            }
+        }
+
+        return response;
+    }
 
 }
