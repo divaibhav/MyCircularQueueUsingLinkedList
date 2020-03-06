@@ -34,6 +34,7 @@ public class MyCircularQueue {
         if (rear != null) {
 
             response = rear.getNext();
+            size--;
             //only a single node
             if (rear.getNext() == rear) {
                 rear = null;
