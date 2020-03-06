@@ -11,8 +11,10 @@ import node.Node;
 public class MyCircularQueue {
     //taking only tail reference
     private Node rear;
+    //to store total number of elements in queue
     private int size;
 
+    //a method to add new element at rear
     public void enqueue(int data) {
         Node node = new Node(data);
         if (isEmpty()) {
@@ -30,6 +32,7 @@ public class MyCircularQueue {
         }
     }
 
+    //a method to remove element from front of queue
     public Node dequeue() {
         Node response = null;
         if (!isEmpty()) {
@@ -47,6 +50,7 @@ public class MyCircularQueue {
         return response;
     }
 
+    //a method to get front elemen of queue
     public Node peek() {
         Node response = null;
         if (!isEmpty()) {
@@ -55,10 +59,12 @@ public class MyCircularQueue {
         return response;
     }
 
+    // to get size of queue
     public int getSize() {
         return size;
     }
 
+    // a method to check whether queue is empty
     public boolean isEmpty() {
         boolean response = false;
         if (rear == null) {
