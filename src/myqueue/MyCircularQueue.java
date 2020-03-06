@@ -21,11 +21,12 @@ public class MyCircularQueue {
             //giving circular behaviour
             node.setNext(node);
         } else {
+            //giving circular behaviour
+            node.setNext(rear);
             rear.setNext(node);
             rear = node;
             size++;
-            //giving circular behaviour
-            node.setNext(node);
+
         }
     }
 
