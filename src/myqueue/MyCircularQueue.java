@@ -11,6 +11,7 @@ import node.Node;
 public class MyCircularQueue {
     //taking only tail reference
     private Node rear;
+    private int size;
 
     public void enqueue(int data) {
         Node node = new Node(data);
