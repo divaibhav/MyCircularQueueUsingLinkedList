@@ -12,5 +12,19 @@ public class MyCircularQueue {
     //taking only tail reference
     Node rear;
 
+    public void enqueue(int data) {
+        Node node = new Node(data);
+        if (rear == null) {
+            rear = node;
+            //giving circular behaviour
+            node.setNext(node);
+        } else {
+            rear.setNext(node);
+            rear = node;
+            //giving circular behaviour
+            node.setNext(node);
+        }
+    }
+
 
 }
